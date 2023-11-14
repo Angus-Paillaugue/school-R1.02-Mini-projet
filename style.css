@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+:root {
+  --primary: #e30613;
+  --light-red: #e3535c;
+  --text-color: #2D2E32;
+  --transition-duration: .15s;
+  --sm-breakpoint: 576px;
+  --md-breakpoint: 768px;
+  --lg-breakpoint: 992px;
+  --xl-breakpoint: 1200px;
+  --xxl-breakpoint: 1400px; 
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-none: 0 0 #0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  color: var(--text-color);
+  background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Mulish, sans-serif;
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+/* Dropdown */
+nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+}
+nav div:first-child {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: .5rem;
+}
+nav div:first-child img {
+  height: 4rem;
+}
+nav div:first-child img:last-child {
+  margin-left: auto;
+}
+nav div:last-child {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+  background-color: var(--primary);
+}
+@media only screen and (max-width: 576px) {
+  nav div:last-child {
+    grid-template-columns: repeat(2, 1fr);
+    gap: .2rem;
+  }
+}
+nav div:last-child a, button {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: .5rem 0;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+.dropdown ul {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 100%;
+  left: 50%;
+  width: 100%;
+  list-style: none;
+  background-color: var(--primary);
+  transform: translateX(-50%);
+  box-shadow: var(--shadow);
+  border-radius: 0 0 .5rem .5rem;
+  max-height: 0;
+  transition: all calc(3.5 * var(--transition-duration)) linear;
+  overflow: hidden;
+  z-index: 30;
+}
+.dropdown ul li {
+  padding: .5rem 0;
+  transition: all var(--transition-duration) ease-in-out;
+}
+.dropdown ul li:is(:hover, :focus) {
+  background-color: var(--light-red);
+}
+.dropdown:is(:hover, :focus-within) ul, .dropdown ul:is(:hover, :focus-within) ul {
+  max-height: 240px;
+}
+.dropdown ul li a {
+  width: 100%;
+  display: block;
+  padding: 0;
+}
+
+
+/* Page */
+main {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+section {
+  padding: .5rem;
+}
+@media only screen and (max-width: 576px) {
+  section {
+    padding: .2rem;
+  }
+}
+.container {
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+}
+.presentation-card {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
+  box-shadow: var(--shadow-lg);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.presentation-card .col-2 {
+  grid-column: span 2;
+  /* overflow: auto; */
+}
+@media only screen and (max-width: 1200px) {
+  .presentation-card .col-2 {
+    grid-column: span 1;
+  }
+  .presentation-card {
+    grid-template-columns: 1fr;
+  }
+}
+.presentation-card.red {
+  background-color: #ffb7a6;
+}
+.competence-grid {
+  display: grid;
+  overflow: visible;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: .5rem;
+}
+.ressource-card {
+  text-decoration: none;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+.ressource-card:hover {
+  transform: translateY(-.3rem);
+  border-radius: .5rem;
+  box-shadow: 0 10px 15px -3px rgba(255, 255, 255, .2), 0 4px 6px -4px rgba(255, 255, 255, .2);
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+table tr:nth-child(even), thead{
+  background-color: #f2f2f2;
+}
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
