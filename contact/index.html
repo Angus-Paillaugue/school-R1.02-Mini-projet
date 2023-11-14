@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BUT Informatique - IUT Toulouse</title>
-    <link rel="stylesheet" href="style.css">
+    <title>BUT Informatique - Contact</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
@@ -62,30 +62,59 @@
     <main>
         <nav class="navbar">
             <div>
-                <img src="src/IUT.png" alt="">
-                <img src="src/UPS.png" alt="">
-                <img src="src/Info.png" alt="">
+                <img src="../src/IUT.png" alt="">
+                <img src="../src/UPS.png" alt="">
+                <img src="../src/Info.png" alt="">
             </div>
             <div>
-                <a href="./">Accueil</a>
-                <a href="./presentation">Présentation du BUT</a>
+                <a href="../">Accueil</a>
+                <a href="../presentation">Présentation du BUT</a>
                 <div class="dropdown">
                     Compétences
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="arrow">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                     </svg>
+                      
                     <ul>
-                        <li><a href="./competences#UE1.1">UE1.1 Dev1</a></li>
-                        <li><a href="./competences#UE1.2">UE1.2 Dev2</a></li>
-                        <li><a href="./competences#UE1.3">UE1.3 Sys</a></li>
-                        <li><a href="./competences#UE1.4">UE1.4 Bdd</a></li>
-                        <li><a href="./competences#UE1.5">UE1.5 Prj</a></li>
-                        <li><a href="./competences#UE1.6">UE1.6 Equ</a></li>
+                        <li><a href="../competences#UE1.1">UE1.1 Dev1</a></li>
+                        <li><a href="../competences#UE1.2">UE1.2 Dev2</a></li>
+                        <li><a href="../competences#UE1.3">UE1.3 Sys</a></li>
+                        <li><a href="../competences#UE1.4">UE1.4 Bdd</a></li>
+                        <li><a href="../competences#UE1.5">UE1.5 Prj</a></li>
+                        <li><a href="../competences#UE1.6">UE1.6 Equ</a></li>
                     </ul>
                 </div>
-                <a href="./contact">Contact</a>
+                <a href="./">Contact</a>
             </div>
         </nav>
+
+        <section>
+            <div class="contact-form">
+                <h2>Formulaire de contact</h2>
+                <form class="contact">
+                    <input type="text" placeholder="Prénom" name="prenom">
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <input type="text" placeholder="Nom" name="nom">
+                    <input type="email" placeholder="E-mail" name="email">
+                    <button class="button-primary">Submit</button>
+                </form>
+            </div>
+            <section class="contact-about">
+                <div>
+                    <img src="../src/Batiment_IUT.png" alt="Bâtiment de l'IUT" style="width: 100%; border-radius: .5rem;">
+                </div>
+                <div>
+                    <div>
+                        <p>IUT Paul Sabatier</p>
+                        <p>Département Informatique
+                        <p>133 B, Avenue de Rangueil </p>
+                        <p>BP 67701</p>
+                        <p>31077 TOULOUSE cedex 4</p>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!4v1699954191843!6m8!1m7!1sC8_XUXgSzST34h6ESWRs7w!2m2!1d43.57006367163641!2d1.464696336452859!3f68.59476652993462!4f3.9969456898271716!5f0.7820865974627469" width="600" height="450" style="border:0; border-radius: .5rem; width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+        </section>
     </main>
     
 </body>

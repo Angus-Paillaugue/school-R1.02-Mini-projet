@@ -5,6 +5,8 @@
   --primary: #e30613;
   --light-red: #e3535c;
   --text-color: #2D2E32;
+  --bg: #FFFFFF;
+  --border-color: #ddd;
   --transition-duration: .15s;
   --sm-breakpoint: 576px;
   --md-breakpoint: 768px;
@@ -20,6 +22,14 @@
   --shadow-none: 0 0 #0000;
 }
 
+[data-theme="dark"]{
+  --primary: #740d13;
+  --light-red: #682a2e;
+  --text-color: #c7c7c7;
+  --bg: #000000;
+  --border-color: #3f3f3f;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +39,7 @@
 body {
   font-family: Poppins, sans-serif;
   color: var(--text-color);
-  background-color: #FFFFFF;
+  background-color: var(--bg);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,11 +50,63 @@ hr {
   margin: 1rem 0;
 }
 
+#themeSwitch {
+  display: none;
+}
+label[for="themeSwitch"] {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--bg);
+}
+label[for="themeSwitch"] svg:nth-child(1) {
+  fill: #000000;
+}
+label[for="themeSwitch"] svg:nth-child(2) {
+  fill: #FFFFFF;
+}
+label[for="themeSwitch"] svg:nth-child(2) {
+  display: none;
+}
+[data-theme="dark"] label[for="themeSwitch"] svg:nth-child(1) {
+  display: none;
+}
+[data-theme="dark"] label[for="themeSwitch"] svg:nth-child(2) {
+  display: block;
+}
+label[for="themeSwitch"] svg:nth-child(2) {
+  display: none;
+}
+.button-primary {
+  background-color: var(--primary);
+  color: var(--bg);
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  transition: all var(--transition-duration) ease-in-out;
+  cursor: pointer;
+}
+.button-primary:hover {
+  background-color: var(--light-red);
+}
+
 /* Dropdown */
 nav {
   display: flex;
   flex-direction: column;
-  background-color: #FFFFFF;
+  background-color: var(--bg);
 }
 nav div:first-child {
   display: flex;
@@ -73,7 +135,7 @@ nav div:last-child {
 }
 nav div:last-child a, button {
   background-color: transparent;
-  color: #FFFFFF;
+  color: var(--bg);
   border: none;
   font-size: 1rem;
   text-decoration: none;
@@ -83,9 +145,23 @@ nav div:last-child a, button {
 /* Dropdown */
 .dropdown {
   position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  color: var(--bg);
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   text-align: center;
+}
+.dropdown .arrow {
+  width: 1rem; 
+  height: 1rem; 
+  right: 1rem;
+  margin-left: 0.5rem; 
+  position: absolute; 
+  top: calc(50% - .5rem);
+  color: var(--bg); 
+  transition: transform calc(2.5 * var(--transition-duration)) ease-in-out;
 }
 .dropdown ul {
   display: flex;
@@ -100,7 +176,7 @@ nav div:last-child a, button {
   box-shadow: var(--shadow);
   border-radius: 0 0 .5rem .5rem;
   max-height: 0;
-  transition: all calc(3.5 * var(--transition-duration)) linear;
+  transition: all calc(2.5 * var(--transition-duration)) linear;
   overflow: hidden;
   z-index: 30;
 }
@@ -110,6 +186,9 @@ nav div:last-child a, button {
 }
 .dropdown ul li:is(:hover, :focus) {
   background-color: var(--light-red);
+}
+.dropdown:is(:hover, :focus-within) .arrow, .dropdown ul:is(:hover, :focus-within) .arrow {
+  transform: rotate(180deg);
 }
 .dropdown:is(:hover, :focus-within) ul, .dropdown ul:is(:hover, :focus-within) ul {
   max-height: 240px;
@@ -149,7 +228,9 @@ section {
 }
 .presentation-card .col-2 {
   grid-column: span 2;
-  /* overflow: auto; */
+}
+.presentation-card:not(:first-child) {
+  margin-top: 1rem;
 }
 @media only screen and (max-width: 1200px) {
   .presentation-card .col-2 {
@@ -159,8 +240,51 @@ section {
     grid-template-columns: 1fr;
   }
 }
-.presentation-card.red {
+section.competences .presentation-card:nth-child(1) {
+  background-color: #e8c5bb;
+}
+section.competences .presentation-card:nth-child(2) {
   background-color: #ffb7a6;
+}
+section.competences .presentation-card:nth-child(3) {
+  background-color: #fee7a0;
+}
+section.competences .presentation-card:nth-child(4) {
+  background-color: #c8d6a7;
+}
+section.competences .presentation-card:nth-child(5) {
+  background-color: #abb7df;
+}
+section.competences .presentation-card:nth-child(6) {
+  background-color: #d0b3ac;
+}
+[data-theme="dark"]{
+  section.competences .presentation-card:nth-child(1) {
+    background-color: #d08a77;
+  }
+  section.competences .presentation-card:nth-child(2) {
+    background-color: #ff6f4c;
+  }
+  section.competences .presentation-card:nth-child(3) {
+    background-color: #fdcf41;
+  }
+  section.competences .presentation-card:nth-child(4) {
+    background-color: #91ae4f;
+  }
+  section.competences .presentation-card:nth-child(5) {
+    background-color: #5770be;
+  }
+  section.competences .presentation-card:nth-child(6) {
+    background-color: #a26859;
+  }
+}
+.presentation-card .competence-name {
+  color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
 }
 .competence-grid {
   display: grid;
@@ -171,18 +295,33 @@ section {
 }
 .ressource-card {
   text-decoration: none;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  background-color: var(--bg);
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
-  transition: all .2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-duration) ease-in-out;
   cursor: pointer;
 }
 .ressource-card:hover {
   transform: translateY(-.3rem);
   border-radius: .5rem;
-  box-shadow: 0 10px 15px -3px rgba(255, 255, 255, .2), 0 4px 6px -4px rgba(255, 255, 255, .2);
+  box-shadow: 0 10px 15px -3px rgba(255, 255, 255, .4), 0 4px 6px -4px rgba(255, 255, 255, .4);
+}
+[data-theme="dark"]{
+  .ressource-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .4), 0 4px 6px -4px rgba(0, 0, 0, .4);
+  }
+}
+@media only screen and (max-width: 576px) {
+  .competence-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Table */
@@ -191,16 +330,96 @@ table {
   width: 100%;
 }
 table td, table th {
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   padding: 8px;
 }
 table tr:nth-child(even), thead{
-  background-color: #f2f2f2;
+  background-color: var(--border-color);
 }
 table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
   background-color: #04AA6D;
-  color: white;
+  color: var(--bg);
+}
+
+.contact-form {
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+form.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: .5rem;
+}
+@media only screen and (max-width: 576px) {
+  form.contact {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+  }
+}
+textarea {
+  resize: none;
+  font-family: Poppins, sans-serif;
+}
+form.contact textarea {
+  grid-row: span 4;
+}
+input, textarea, select {
+  padding: .25rem .4rem;
+  border-radius: .4rem; 
+  border: 1px solid var(--text-color); 
+  width: 100%; 
+  font-size: 1rem;
+  line-height: 1.5rem; 
+  transition: all var(--transition-duration) ease-in-out;
+  outline: none;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  caret-color: var(--primary);
+  box-shadow: 0 0 0 0.25rem rgb(227 6 19 / 25%);
+}
+.contact-about {
+  border: 1px solid var(--border-color);
+  margin-top: 1rem;
+  border-radius: .5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
+}
+.contact-about div:nth-child(1) {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-about div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .5rem;
+  width: 100%;
+}
+.contact-about div:nth-child(2) div {
+  padding: .5rem;
+  border: 1px solid var(--border-color);
+  border-radius: .5rem;
+  width: 100%;
+}
+@media only screen and (max-width: 992px) {
+  .contact-about {
+    grid-template-columns: 1fr;
+  }
+  .contact-about div {
+    grid-column: span 1;
+  }
 }

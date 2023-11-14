@@ -68,20 +68,27 @@
                 <img src="../src/Info.png" alt="">
             </div>
             <div>
-                <a href="/">Accueil</a>
+                <a href="../">Accueil</a>
                 <a href="presentation">Présentation du BUT</a>
-                <button class="dropdown">
+                <div class="dropdown">
                     Compétences
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="arrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
                     <ul>
-                        <li><a href="presentation#competences">Comp 1</a></li>
-                        <li><a href="presentation#competences">Comp 2</a></li>
-                        <li><a href="presentation#competences">Comp 3</a></li>
+                        <li><a href="../competences#UE1.1">UE1.1 Dev1</a></li>
+                        <li><a href="../competences#UE1.2">UE1.2 Dev2</a></li>
+                        <li><a href="../competences#UE1.3">UE1.3 Sys</a></li>
+                        <li><a href="../competences#UE1.4">UE1.4 Bdd</a></li>
+                        <li><a href="../competences#UE1.5">UE1.5 Prj</a></li>
+                        <li><a href="../competences#UE1.6">UE1.6 Equ</a></li>
                     </ul>
-                </button>
-                <a href="/contact">Contact</a>
+                </div>
+                <a href="../contact">Contact</a>
             </div>
         </nav>
 
+        <!-- Competences et matières -->
         <section>
             <h1>Présentation BUT Informatique</h1>
             <div class="presentation-card" style="overflow: auto;">
@@ -218,15 +225,79 @@
 
             <hr>
 
-            <div class="presentation-card red">
-                <div>
+            <section class="competences">
+                <div class="presentation-card">
+                    <a href="/competences#UE1.1" class="competence-name">
+                        <h2>UE1.1 Dev1</h2>
+                    </a>
+                    <div class="col-2 competence-grid">
+                        <div class="ressource-card">R1.01 Initiation au dev.</div>
+                        <div class="ressource-card">R1.02 Dev. interfaces web</div>
+                        <div class="ressource-card">R1.10 Anglais</div>
+                    </div>
+                </div>
+    
+                <div class="presentation-card">
+                    <div class="col-2 competence-grid">
+                        <div class="ressource-card">R1.01 Initiation au dev.</div>
+                        <div class="ressource-card">R1.03 Intro. archi</div>
+                        <div class="ressource-card">R1.04 Intro. systèmes</div>
+                        <div class="ressource-card">R1.06 Maths discrètes</div>
+                        <div class="ressource-card">R1.07 Outils fondamentaux</div>
+                    </div>
+                    <a href="/competences#UE1.2" class="competence-name">
+                        <h2>UE1.2 Dev2</h2>
+                    </a>
+                </div>
+    
+                <div class="presentation-card">
+                    <a href="/competences#UE1.3" class="competence-name">
+                        <h2>UE1.3 Sys</h2>
+                    </a>
+                    <div class="col-2 competence-grid">
+                        <div class="ressource-card">R1.03 Intro. archi</div>
+                        <div class="ressource-card">R1.04 Intro. systèmes</div>
+                        <div class="ressource-card">R1.10 Anglais</div>
+                        <div class="ressource-card">R1.11 Bases de la comm.</div>
+                    </div>
+                </div>
 
+                <div class="presentation-card">
+                    <div class="col-2 competence-grid">
+                        <div class="ressource-card">R1.05 Introduction BD</div>
+                        <div class="ressource-card">R1.06 Maths discrètes</div>
+                        <div class="ressource-card">R1.09 Economie</div>
+                    </div>
+                    <a href="/competences#UE1.4" class="competence-name">
+                        <h2>UE1.4 Bdd</h2>
+                    </a>
                 </div>
-                <div class="col-2 competence-grid">
-                    <a href="/competences#R1.01" class="ressource-card">R1.01 Initiation au dev.</a>
-                    <a href="/competences#R1.02" class="ressource-card">R1.02 Dev. interfaces web</a>
+
+                <div class="presentation-card">
+                    <a href="/competences#UE1.5" class="competence-name">
+                        <h2>UE1.5 Prj</h2>
+                    </a>
+                    <div class="col-2 competence-grid">
+                        <div class="ressource-card">R1.02 Dev. interfaces web</div>
+                        <div class="ressource-card">R1.08 Gestion proj. orga.</div>
+                        <div class="ressource-card">R1.11 Bases de la comm.</div>
+                    </div>
                 </div>
-            </div>
+
+                <div class="presentation-card">
+                    <div class="col-2 competence-grid">
+                        <div class="ressource-card">R1.02 Dev. interfaces web</div>
+                        <div class="ressource-card">R1.08 Gestion proj. orga.</div>
+                        <div class="ressource-card">R1.09 Economie</div>
+                        <div class="ressource-card">R1.10 Anglais</div>
+                        <div class="ressource-card">R1.11 Bases de la comm.</div>
+                        <div class="ressource-card">R1.12 PPP</div>
+                    </div>
+                    <a href="/competences#UE1.6" class="competence-name">
+                        <h2>UE1.6 Equ</h2>
+                    </a>
+                </div>
+            </section>
         </section>
     </main>
     
