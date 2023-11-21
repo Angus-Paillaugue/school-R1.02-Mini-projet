@@ -463,8 +463,21 @@ input:focus, textarea:focus, select:focus {
 }
 
 .section-content {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));;
+}
+.section-content a {
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all var(--transition-duration) ease-in-out;
+}
+.section-content a:hover {
+  background-color: var(--border-color);
 }
 .right {
   margin: 0 .5rem;
@@ -534,8 +547,6 @@ hr{
   color: var(--text-color);
   padding: .5rem;
 }
-
-
 footer{
   display: flex;
   background: var(--border-color);
@@ -566,7 +577,6 @@ footer a{
 .entreprise h2 {
   color: var(--primary);
 }
-
 @media screen and (max-width : 768px){
   footer{
     flex-direction: column;
