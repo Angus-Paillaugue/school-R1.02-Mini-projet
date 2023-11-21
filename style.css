@@ -130,6 +130,12 @@ nav div:first-child {
   flex-direction: row;
   gap: 1rem;
   padding: .5rem;
+  background-color: var(--border-color);
+}
+[data-theme="dark"]{
+  nav div:first-child {
+    background-color: var(--bg);
+  }
 }
 nav div:first-child img {
   height: 4rem;
