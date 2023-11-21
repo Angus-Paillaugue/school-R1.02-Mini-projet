@@ -3,61 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentation BUT</title>
+    <title>UE1.6</title>
     <link rel="stylesheet" href="../../style.css">
+    <script src="https://gist.githubusercontent.com/Angus-Paillaugue/3d46f53cb6b2aa0d290c9670ca9a365b/raw/71cfd6ce814786983192ebed5c64209d10c76b3d/test.js"></script>
 </head>
 <body>
-
-    <script>
-        let keyStroke = [];
-        document.addEventListener('keydown', event => {
-            keyStroke.push(event.key);
-            keyStroke.forEach((key, index) => {
-                switch(index){
-                    case 0:
-                    case 1:
-                        if(key !== "ArrowUp") keyStroke = [];
-                        break;
-                    case 2:
-                    case 3:
-                        if(key !== "ArrowDown") keyStroke = [];
-                        break;
-                    case 4:
-                    case 6:
-                        if(key !== "ArrowLeft") keyStroke = [];
-                        break;
-                    case 5:
-                    case 7:
-                        if(key !== "ArrowRight") keyStroke = [];
-                        break;
-                    case 8:
-                        if(key !== "b") keyStroke = [];
-                        break;
-                    case 9:
-                        if(key !== "a") keyStroke = [];
-                        break;
-                }
-                if(index == 9 && keyStroke.length == 10){
-                    keyStroke = [];
-                    status = status?.popupDarkTheme ?? false;
-                    const screamer = document.createElement("div");
-                    screamer.style.position = "fixed";
-                    screamer.style.top = "0px";
-                    screamer.style.left = "0px";
-                    screamer.style.width = "100vw";
-                    screamer.style.height = "100vh";
-                    screamer.style.display = "flex";
-                    screamer.style.flexDirection = "column";
-                    screamer.innerHTML = `<img src="https://media.licdn.com/dms/image/C5603AQHGcJGjePdGEQ/profile-displayphoto-shrink_400_400/0/1517072732081?e=1704326400&v=beta&t=O63c8R0xW9Of5Sumw7bjvIU1NIP8PHZlbxvNxXzts00" style="width:100vw; height: 100vh;">`;
-                    screamer.id = "screamer";
-                    document.body.appendChild(screamer);
-                    setTimeout(() => {
-                        if(document.getElementById("screamer")) document.getElementById("screamer").remove();
-                    }, 1500);
-                }
-            });
-        });
-    </script>
 
     <!-- Theme switch -->
     <label for="themeSwitch">
