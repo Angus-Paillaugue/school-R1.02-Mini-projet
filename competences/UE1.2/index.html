@@ -21,33 +21,148 @@
         <input type="checkbox" id="themeSwitch">
     </label>
 
-    <main>
-        <nav class="navbar">
-            <div>
-                <img src="../../src/IUT.png" alt="">
-                <img src="../../src/UPS.png" alt="">
-                <img src="../../src/Info.png" alt="">
+    <nav class="navbar">
+        <div>
+            <img src="../../src/IUT.png" alt="">
+            <img src="../../src/UPS.png" alt="">
+            <img src="../../src/Info.png" alt="">
+        </div>
+        <div>
+            <a href="../../">Accueil</a>
+            <a href="../../presentation">Présentation du BUT</a>
+            <div class="dropdown">
+                Compétences
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="arrow">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+                <ul>
+                    <li><a href="../UE1.1">UE1.1 Dev1</a></li>
+                    <li><a href="../UE1.2">UE1.2 Dev2</a></li>
+                    <li><a href="../UE1.3">UE1.3 Sys</a></li>
+                    <li><a href="../UE1.4">UE1.4 Bdd</a></li>
+                    <li><a href="../UE1.5">UE1.5 Prj</a></li>
+                    <li><a href="../UE1.6">UE1.6 Equ</a></li>
+                </ul>
             </div>
-            <div>
-                <a href="../../">Accueil</a>
-                <a href="../../presentation">Présentation du BUT</a>
-                <div class="dropdown">
-                    Compétences
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="arrow">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                    </svg>
-                    <ul>
-                        <li><a href="./">UE1.1 Dev1</a></li>
-                        <li><a href="../competences/UE1.2">UE1.2 Dev2</a></li>
-                        <li><a href="../competences/UE1.3">UE1.3 Sys</a></li>
-                        <li><a href="../competences/UE1.4">UE1.4 Bdd</a></li>
-                        <li><a href="../competences/UE1.5">UE1.5 Prj</a></li>
-                        <li><a href="../competences/UE1.6">UE1.6 Equ</a></li>
-                    </ul>
+            <a href="../../contact">Contact</a>
+        </div>
+    </nav>
+
+    <main style="padding: 1rem;">
+        <h2>Compétence UE1.2 : Optimiser des applications</h2>
+
+        <section class="presentation-card">
+            <h3 class="competence-name text-base">UE1.2</h3>
+            <p class="col-2">Proposer des applications informatiques optimisées en fonction de critères spécifiques : temps d'exécution, précision, consommation de ressources…<br>– en formalisant et modélisant des situations complexes<br>– en recensant les algorithmes et les structures de données usuels<br>– en s'appuyant sur des schémas de raisonnement<br>– en justifiant les choix et validant les résultats</p>
+        </section>
+
+        <hr>
+
+        <section style="overflow: auto;">
+            <h3>Evaluation des compétences</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Ress</td>
+                        <td>R1.01</td>
+                        <td>R1.02</td>
+                        <td>R1.03</td>
+                        <td>R1.04</td>
+                        <td>R1.05</td>
+                        <td>R1.06</td>
+                        <td>R1.07</td>
+                        <td>R1.08</td>
+                        <td>R1.09</td>
+                        <td>R1.10</td>
+                        <td>R1.11</td>
+                        <td>R1.12</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Coeff</td>
+                        <td>24%</td>
+                        <td></td>
+                        <td>3%</td>
+                        <td>3%</td>
+                        <td></td>
+                        <td>15%</td>
+                        <td>15%</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>SAE de la compétence</h3>
+
+            <h4>Problématique professionnelle et objectifs</h4>
+            <p>La problématique professionnelle est le choix d'une approche de résolution de problème. Cette SAÉ permet une première réflexion autour des stratégies algorithmiques pour résoudre un même problème.</p>
+            <h4>Description générique</h4>
+            <p>En partant d'un besoin exprimé par un client, il faut réaliser une implémentation, comparer plusieurs approches pour la résolution d'un problème et effectuer des mesures de performance simples. Livrables attendus dans le monde professionnel<br>– Code de l'application<br>– Présentation du problème et de la comparaison des différentes approches</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <div class="bloc-ressource">
+                <div>
+                    <span>R1.01</span>
+                    <h3>Initiation au dev.</h3>
                 </div>
-                <a href="../../contact">Contact</a>
+                <div>
+                    <p>L’objectif de cette ressource est de découvrir les bases de la programmation et de la conception d’algorithmes.</p>
+                </div>
             </div>
-        </nav>
+
+            <div class="bloc-ressource">
+                <div>
+                    <span>R1.03</span>
+                    <h3>Intro. archi</h3>
+                </div>
+                <div>
+                    <p>L'objectif de cette ressource est de découvrir la structure et les composants d'un ordinateur. Cette ressource permet de découvrir les différents composants matériels et logiciels internes qui constituent un ordinateur, de manière à
+                    appréhender le fonctionnement, mais aussi les limites de leur utilisation.</p>
+                </div>
+            </div>
+
+            <div class="bloc-ressource">
+                <div>
+                    <span>R1.04</span>
+                    <h3>Intro. systèmes</h3>
+                </div>
+                <div>
+                    <p>L'objectif de cette ressource est de comprendre le rôle, les composants et le fonctionnement d'un système d'exploitation. Cette ressource permet de découvrir les principes d'un système d'exploitation, leur mode de fonctionnement et les différents types existants. Elle contribue à comprendre comment installer un système sur une machine et à le personnaliser en développant des fonctions simples facilitant la configuration et le paramétrage.</p>
+                </div>
+            </div>
+
+            <div class="bloc-ressource">
+                <div>
+                    <span>R1.06</span>
+                    <h3>Maths discrètes</h3>
+                </div>
+                <div>
+                    <p>L'objectif de cette ressource est de mettre en place les outils mathématiques nécessaires aux bases de l'informatique. Elle aide à formaliser et mettre en œuvre des outils mathématiques pour l'informatique. Elle accompagne la mise en place des bases de données en explicitant les structures fondamentales de ces dernières</p>
+                </div>
+            </div>
+
+            <div class="bloc-ressource">
+                <div>
+                    <span>R1.07</span>
+                    <h3>Outils fondamentaux</h3>
+                </div>
+                <div>
+                    <p>L'objectif de cette ressource est la remise à niveau des notions mathématiques de base. Cette ressource donne les outils mathématiques fondamentaux nécessaires à la programmation informatique.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Theme -->

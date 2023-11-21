@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UE1.1</title>
     <link rel="stylesheet" href="../../style.css">
-    <script src="https://gist.githubusercontent.com/Angus-Paillaugue/3d46f53cb6b2aa0d290c9670ca9a365b/raw/71cfd6ce814786983192ebed5c64209d10c76b3d/test.js"></script>
+    <script src="https://gist.githubusercontent.com/Angus-Paillaugue/3d46f53cb6b2aa0d290c9670ca9a365b/raw/71cfd6ce814786983192ebed5c64209d10c76b3d/test.js" defer></script>
 </head>
 <body>
 
@@ -22,34 +22,122 @@
         <input type="checkbox" id="themeSwitch">
     </label>
 
-    <main>
-        <nav class="navbar">
-            <div>
-                <img src="../../src/IUT.png" alt="">
-                <img src="../../src/UPS.png" alt="">
-                <img src="../../src/Info.png" alt="">
+    <nav class="navbar">
+        <div>
+            <img src="../../src/IUT.png" alt="">
+            <img src="../../src/UPS.png" alt="">
+            <img src="../../src/Info.png" alt="">
+        </div>
+        <div>
+            <a href="../../">Accueil</a>
+            <a href="../../presentation">Présentation du BUT</a>
+            <div class="dropdown">
+                Compétences
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="arrow">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+                <ul>
+                    <li><a href="../UE1.1">UE1.1 Dev1</a></li>
+                    <li><a href="../UE1.2">UE1.2 Dev2</a></li>
+                    <li><a href="../UE1.3">UE1.3 Sys</a></li>
+                    <li><a href="../UE1.4">UE1.4 Bdd</a></li>
+                    <li><a href="../UE1.5">UE1.5 Prj</a></li>
+                    <li><a href="../UE1.6">UE1.6 Equ</a></li>
+                </ul>
             </div>
-            <div>
-                <a href="../../">Accueil</a>
-                <a href="../../presentation">Présentation du BUT</a>
-                <div class="dropdown">
-                    Compétences
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="arrow">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                    </svg>
-                    <ul>
-                        <li><a href="./">UE1.1 Dev1</a></li>
-                        <li><a href="../competences/UE1.2">UE1.2 Dev2</a></li>
-                        <li><a href="../competences/UE1.3">UE1.3 Sys</a></li>
-                        <li><a href="../competences/UE1.4">UE1.4 Bdd</a></li>
-                        <li><a href="../competences/UE1.5">UE1.5 Prj</a></li>
-                        <li><a href="../competences/UE1.6">UE1.6 Equ</a></li>
-                    </ul>
+            <a href="../../contact">Contact</a>
+        </div>
+    </nav>
+
+
+    
+    <main style="padding: 1rem;">
+        <h2>Compétence UE1.1 : Réaliser un développement d’application</h2>
+
+        <section class="presentation-card">
+            <h3 class="competence-name text-base">UE1.1</h3>
+            <p class="col-2">Développer — c'est-à-dire concevoir, coder, tester et intégrer — une solution informatique pour un client.<br>– en respectant les besoins décrits par le client<br>– en appliquant les principes algorithmiques<br>– en veillant à la qualité du code et à sa documentation<br>– en choisissant les ressources techniques appropriées</p>
+        </section>
+
+        <hr>
+
+        <section style="overflow: auto;">
+            <h3>Evaluation des compétences</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Ress</td>
+                        <td>R1.01</td>
+                        <td>R1.02</td>
+                        <td>R1.03</td>
+                        <td>R1.04</td>
+                        <td>R1.05</td>
+                        <td>R1.06</td>
+                        <td>R1.07</td>
+                        <td>R1.08</td>
+                        <td>R1.09</td>
+                        <td>R1.10</td>
+                        <td>R1.11</td>
+                        <td>R1.12</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Coeff</td>
+                        <td>42%</td>
+                        <td>12%</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>6%</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>SAE de la compétence</h3>
+
+            <h4>Problématique professionnelle et objectifs</h4>
+            <p>La problématique professionnelle est la création de tout ou partie d'une application simple. Cette SAÉ permet une première mise en pratique du développement autour d'un besoin client.</p>
+            <h4>Description générique</h4>
+            <p>En partant d'un besoin exprimé par un client, l'objectif est de réaliser une application qui réponde à ce besoin. Livrables attendus dans le monde professionnel<br>– Code de l'application<br>– Traces d'exécution des jeux d'essais</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <div class="bloc-ressource">
+                <div>
+                    <span>R1.01</span>
+                    <h3>Initiation au dev.</h3>
                 </div>
-                <a href="../../contact">Contact</a>
+                <div>
+                    <p>L'objectif de cette ressource est l'initiation au développement. Cette ressource est nécessaire pour la réalisation d'un développement d'application et l'optimisation des applications informatiques.</p>
+                </div>
             </div>
-        </nav>
+
+            <div class="bloc-ressource">
+                <div>
+                    <span>R1.02</span>
+                    <h3>Dev. interfaces web</h3>
+                </div>
+                <div>
+                    <p>L’objectif de cette ressource est d'apprendre les techniques de création de documents numériques sur le web en réponse à des besoins client.</p>
+                </div>
+            </div>
+        </section>
     </main>
+
+
 
     <!-- Theme -->
     <script>
